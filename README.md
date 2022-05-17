@@ -17,7 +17,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 ```
 
-## Create data file
+## Create data file Books.js
 
 ```
 export const books = [
@@ -42,51 +42,52 @@ export const books = [
   ];
 
 ```
-## Create Book Functional Component with event onClick
+## Create Book Functional Component with event onClick "Book.Js"
 
 ```
 
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const Book = (props) => 
-{
-    const eventHandler = ()=>
-    {
-        alert('Testing Click event!!');
-    };
+const Book = props => {
+  const eventHandler = () => {
+    alert("Testing Click event!!");
+  };
 
-    const showAuthor = (author)=>
-    {
-        alert(author);
-    };
+  const showAuthor = author => {
+    alert(author);
+  };
 
-    const {BookName,AuthorName,BookDetail } = props.book;
-    return ( 
-        <div>
-            <h1>{BookName}</h1>
-            <h2>{AuthorName}</h2>
-            <h3>{BookDetail}</h3>
-            <button onClick={eventHandler}>Click Me</button> <span></span>
-            <button onClick={()=>{alert(BookName);}}>Show Book Name</button> <span></span>
-            <button onClick={()=>showAuthor(AuthorName)}>Show Author Name</button>
-            <hr/>
-       </div>
-    );
-
+  const { BookName, AuthorName, BookDetail, ImgURL } = props.book;
+  return (
+    <div class="col-sm">
+      <div className="card" style={{ width: 18 + "rem" }}>
+        <img className="card-img-top" src={ImgURL} alt="Card image cap" />
+        <div className="card-body">
+          <h4 onClick={()=>{alert(BookName);}} className="card-title">{BookName}</h4>
+          <h5 onClick={()=>showAuthor(AuthorName)} className="card-title">{AuthorName}</h5>
+          <p className="card-text">{BookDetail}</p>
+          <a onClick={eventHandler} href="#" className="btn btn-primary">
+            Click Me
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-    // <div>
-    //     <h2>{props.bookName}</h2>;  
-    //     <h3>{props.authorName}</h3>;
-    //     <h4>{props.bookDetail}</h4>;
-    // </div>
+// <div>
+//     <h2>{props.bookName}</h2>;
+//     <h3>{props.authorName}</h3>;
+//     <h4>{props.bookDetail}</h4>;
+// </div>
 
 export default Book;
 
+
 ```
 
-## Bind and show data list
+## Bind and show data list in App.js
 
 ```
 import logo from "./logo.svg";
@@ -96,21 +97,25 @@ import {books} from "./Books"
 
 function App() {
   return (
-    <div>
+    <div class="container">
+    <div class="row">
       {
+        
         books.map(book=>{
         return (  
-         <Book key={book.id}
-            book = {book}>
-          </Book>);
-
+         
+            <Book key={book.id}
+                book = {book}>
+            </Book>
+         
+          );
       })
     }
+    </div>
     </div>
   );
 }
 
 export default App;
-
 
 ```
