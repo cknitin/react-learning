@@ -1,6 +1,21 @@
 # React-learning
 This repo will help you to learn the ReactJS.
 
+## How to install Bootstrap
+
+```
+    npm install --save bootstrap
+```
+
+```
+Then add the following import statement to index.js file.
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
+
+```
+
 ## Create data file
 
 ```
