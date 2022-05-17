@@ -42,7 +42,7 @@ export const books = [
   ];
 
 ```
-## Create Book Functional Component with event onClick "Book.Js"
+## Create Book Functional Component with event onClick "Book.js"
 
 ```
 
