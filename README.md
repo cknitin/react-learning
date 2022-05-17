@@ -69,3 +69,32 @@ const Book = (props) =>
 export default Book;
 
 ```
+
+## Bind and show data list
+
+```
+import logo from "./logo.svg";
+import "./App.css";
+import Book from "./Book";
+import {books} from "./Books"
+
+function App() {
+  return (
+    <div>
+      {
+        books.map(book=>{
+        return (  
+         <Book key={book.id}
+            book = {book}>
+          </Book>);
+
+      })
+    }
+    </div>
+  );
+}
+
+export default App;
+
+
+```
