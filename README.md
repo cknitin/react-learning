@@ -1,7 +1,7 @@
 # React-learning
 This repo will help you to learn the ReactJS.
 
-## How to install Bootstrap
+## 1. How to install Bootstrap
 
 ```
     npm install --save bootstrap
@@ -16,7 +16,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 ```
-# How to bind list of books in ReactJS
+# 2. How to bind list of books in ReactJS
 
 ## Create data file Books.js
 
@@ -121,7 +121,7 @@ export default App;
 
 ```
 
-# React useState Hook
+# 3. React useState Hook
 
 ##  Import useState
 
