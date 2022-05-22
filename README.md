@@ -120,3 +120,33 @@ function App() {
 export default App;
 
 ```
+
+# React useState Hook
+
+##  Import useState
+
+```
+import { useState } from "react";
+```
+
+## Initialize useState
+
+```
+const [count, setCount] = useState(0);
+```
+
+## Update State
+
+```
+const incrementCount = () => {
+  setCount(count + 1);
+};
+```
+
+## Show or Read State
+```
+<label>Show Count# {count}</label> <span></span> <span></span>
+<button className="btn btn-info" onClick={incrementCount}>Increment</button>
+```
+
+
