@@ -149,4 +149,21 @@ const incrementCount = () => {
 <button className="btn btn-info" onClick={incrementCount}>Increment</button>
 ```
 
+## Create a single Hook that holds an object:
+```
+const [car, setCar] = useState({
+    brand: "Ford",
+    model: "Mustang",
+    year: "1964",
+    color: "red"
+  });
+```
 
+## Updating Objects and Arrays in State
+```
+const updateColor = () => {
+    setCar(previousState => {
+      return { ...previousState, color: "blue" }
+    });
+}
+```
