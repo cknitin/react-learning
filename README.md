@@ -167,3 +167,72 @@ const updateColor = () => {
     });
 }
 ```
+# Add and Remove item in data
+##Create a file "data.js", add data in it
+
+```
+export const data = [
+  { id: 1, name: 'Harry Potter' },
+  { id: 2, name: 'Hermione Granger' },
+  { id: 3, name: 'Ron Weasley' },
+  { id: 4, name: 'Draco Malfoy' },
+  { id: 5, name: 'Luna Lovegood' }
+];
+
+```
+## Crate a file "SetPeople.js"
+
+```
+import people from "./data"
+import {useState} from "react"
+import {data} from "./data"
+
+function SetPeople()
+{
+    const[people,setPeople] = useState(data);
+
+    const removeItem = (id)=>{
+        let newPeople = people.filter((people)=>people.id !== id);
+         setPeople(newPeople);
+    }
+
+    return (
+        <div>
+        {
+            people.map(
+                (people)=>{
+                    const {id,name} = people;
+                    return (<div key={id} className="item">
+                            {people.name}
+                            <button onClick={() => removeItem(id)}>remove</button>
+                    </div>)
+                }
+            )
+        }
+            <button className="btn" onClick={()=>{ setPeople([]) }}>Clear All!</button>
+        </div>
+    );
+}
+
+export default SetPeople;
+```
+
+## Call the above file in App.js
+
+```
+import "./App.css";
+import PeopleElement from "./SetPeople"
+
+function App() {
+  return (
+    <div className="container">
+      <PeopleElement/>
+      
+    </div>
+  );
+}
+
+export default App;
+
+```
+
