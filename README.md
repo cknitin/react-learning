@@ -1,4 +1,4 @@
-# React-learning
+# React Learning
 This repo will help you to learn the ReactJS.
 
 ## 1. How to install Bootstrap
