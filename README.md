@@ -167,7 +167,7 @@ const updateColor = () => {
     });
 }
 ```
-# Add and Remove item in data
+# Remove item and Clear all items in data
 ##Create a file "data.js", add data in it
 
 ```
