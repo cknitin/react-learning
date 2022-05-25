@@ -235,4 +235,31 @@ function App() {
 export default App;
 
 ```
+# Problem 5# useState with object
+## Update value in object
+
+```
+import React, { useState } from 'react';
+
+const UseStateObject = () => {
+  const[person,setPerson] = useState({
+    name:"Peter",age:"21",message:"Good Morning"
+  });
+
+  const changeMessage = ()=>{
+    setPerson({...person, message:"Good Night"});
+  };
+
+  return (
+  <div>
+    <h3>{person.name}</h3>
+    <h3>{person.age}</h3>
+    <h3>{person.message}</h3>
+    <button className="btn" onClick={changeMessage}>Change Message</button>
+  </div>);
+};
+
+export default UseStateObject;
+
+```
 
