@@ -263,3 +263,35 @@ export default UseStateObject;
 
 ```
 
+# Problem 6# useState - Multiple state values
+## Updating multiple states
+
+```
+
+import React, { useState } from 'react';
+
+const UseStateObject = () => {
+  
+  const [name,setName] = useState('Harry')
+  const [age,setAge] = useState(24)
+  const [message,setMessage] = useState('Good Morning')
+
+
+  const changeMessage = ()=>{
+    setName("Rachel");
+    setAge(21);
+    setMessage("Good Night!!");
+  };
+
+  return (
+  <div>
+    <h3>{name}</h3>
+    <h3>{age}</h3>
+    <h3>{message}</h3>
+    <button className="btn" onClick={changeMessage}>Change Message</button>
+  </div>);
+};
+
+export default UseStateObject;
+
+```
