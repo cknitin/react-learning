@@ -167,6 +167,33 @@ export default UseStateCounter;
 
 ```
 
+## Example - More complex counter
+
+```
+import React, { useState } from 'react';
+
+const UseStateCounter = () => {
+  const[value,setValue] = useState(0);
+
+  const complexIncrement = ()=>{
+    setTimeout(()=>{
+      //setValue(value+1)
+      setValue((prevState)=>{
+          return prevState + 1;
+      });
+    },2000);
+  }
+
+  return <div>
+  <h3>{value}</h3>
+  <button className="btn" onClick={complexIncrement}>Complex Increment</button>
+  </div>;
+};
+
+export default UseStateCounter;
+
+```
+
 ## Show or Read State
 ```
 <label>Show Count# {count}</label> <span></span> <span></span>
