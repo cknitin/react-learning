@@ -167,7 +167,7 @@ export default UseStateCounter;
 
 ```
 
-## Example - More complex counter
+## Example - More complex counter using functional update
 
 ```
 import React, { useState } from 'react';
