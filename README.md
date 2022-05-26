@@ -142,6 +142,30 @@ const incrementCount = () => {
   setCount(count + 1);
 };
 ```
+## Example - Counter increment, decrement, rest
+
+```
+import React, { useState } from 'react';
+
+const UseStateCounter = () => {
+  const[value,setValue] = useState(0);
+
+  const reset = ()=>{
+    setValue(0);
+  }
+
+  return <div>
+  <h3>{value}</h3>
+  <button className="btn" onClick={()=>setValue(value-1)}>Decrement</button>
+  <button className="btn" onClick={()=>setValue(value+1)}>Increment</button>
+  <button className="btn" onClick={reset}>Reset</button>
+  </div>;
+};
+
+export default UseStateCounter;
+
+
+```
 
 ## Show or Read State
 ```
