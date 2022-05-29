@@ -1,6 +1,26 @@
 # React Learning
 This repo will help you to learn the ReactJS.
 
+## Create reactJs App
+
+```
+npx create-react-app my-app
+
+```
+
+### Navigate to program directory
+
+```
+cd my-app
+```
+
+### Run program
+
+```
+npm start
+```
+
+
 ## Problem 1# How to install Bootstrap
 
 ```
