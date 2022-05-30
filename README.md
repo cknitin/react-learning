@@ -405,3 +405,33 @@ const UseStateObject = () => {
 export default UseStateObject;
 
 ```
+
+# Problem 7# - using AXIOS
+
+## key point 
+- return a promise
+- repsonse data located in data object
+- error in error.response
+
+## install axios
+
+```
+npm install axios
+```
+## import axios
+
+```
+import axios from "axios";
+```
+
+## important function
+```
+-   axios.get(url)
+-   axios.post(url)
+-   axios.patch/put(url)
+-   axios.delete(url)
+```
+### defualt function is get
+```
+default get axios(url)  
+```
