@@ -427,7 +427,9 @@ import axios from "axios";
 ## important function
 ```
 -   axios.get(url)
+-   axios.get(url,{header})
 -   axios.post(url)
+-   axios.post(url,{data},{header})
 -   axios.patch/put(url)
 -   axios.delete(url)
 ```
