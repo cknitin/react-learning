@@ -466,4 +466,44 @@ const FetchRequest = () => {
 export default FetchRequest;
 
 ```
+## Example -get request with header
+```
+import axios from "axios";
+import react,{useState} from "react";
+
+const url = "https://icanhazdadjoke.com";
+
+const Joke = ()=> {
+    
+    const[joke,setJoke] = useState("Random joke");
+
+    const fetchDadJoke = async ()=>{
+       
+       try {
+           const {data} = await axios.get(url,{headers:{
+               Accept:"application/json"
+           }});
+
+           setJoke(data.joke);
+           
+       } catch (error) {
+           console.log(error.response);
+       }
+    }
+
+    const GetRandonJoke = ()=>
+    {
+        fetchDadJoke();
+    }
+    
+    return(
+        <div className="section text-center">
+           <button className="btn" onClick={GetRandonJoke}>Ramdom Joke</button>
+           <p className="text-center">{joke}</p>
+        </div>
+    );
+}
+
+export default Joke
+```
 
