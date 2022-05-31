@@ -571,3 +571,24 @@ export default PostRequest;
 
 ```
 
+## Problem - setting defualt values for axios
+
+In global.js add below lines
+
+```
+import axios from 'axios';
+
+axios.defaults.headers.common['Accept'] = 'application/json';
+axios.defaults.baseURL = "https://api.example.com";
+axios.defaults.headers.common["Authorization"] = AUTH_TOKEN;
+axios.defualt.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+```
+
+now in App.js import it
+
+```
+import './axios/global'
+```
+
+
+
